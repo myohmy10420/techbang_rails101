@@ -4,11 +4,11 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @groups = Group.all
+    @groups = Group.all.order("updated_at DESC")
   end
 
   def show
-    @posts = @group.posts
+    @posts = @group.posts.order("updated_at DESC")
   end
 
   def new
