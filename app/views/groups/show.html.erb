@@ -1,6 +1,6 @@
 <div class="span12">
   <div class="group">
-    <%= link_to("Edit", edit_group_path(@group) , class: "btn btn-mini btn-primary pull-right") %>
+    <%= link_to("Edit", edit_group_path(@group) , class: "btn btn-mini btn-primary pull-right") if @group.editable_by?(current_user) %>
     <%= link_to("New Post", new_group_post_path(@group) , class: "btn btn-mini btn-primary pull-right") %>
   </div>
   <h2><%= @group.title %></h2>
