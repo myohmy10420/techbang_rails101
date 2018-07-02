@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container-fluid">
+    <%= render "common/user_nav" %>
+    <% if !flash.empty? %>
+      <p><%= flash_messages %></p>
+    <% end %>
+    <%= yield %>
+  </div>
 </body>
 </html>
