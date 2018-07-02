@@ -19,7 +19,7 @@
     <tbody>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= post.content %></td>
+          <td><%= render_post_content(post) %></td>
           <td>
             <%= link_to("Edit", edit_group_post_path(post.group, post), class: "btn btn-mini") %>
             <%= link_to("Delete", group_post_path(post.group, post), class: "btn btn-mini", method: :delete, data: { confirm: "Are you sure?" }) %>
