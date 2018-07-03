@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @posts = @group.posts.order("updated_at DESC")
+    @posts = @group.posts.recent
   end
 
   def new

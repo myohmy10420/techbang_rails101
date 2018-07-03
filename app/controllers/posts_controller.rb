@@ -45,7 +45,6 @@ class PostsController < ApplicationController
   def find_post
     @post = current_user.posts.find(params[:id])
   end
-
   def posts_params
     params.require(:post).permit(:content)
   end
