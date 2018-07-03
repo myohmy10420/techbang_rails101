@@ -12,10 +12,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'simple_form'
 gem 'devise'
+gem 'mysql2'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+
+  gem 'rspec-rails'
+  gem 'byebug', platform: :mri
+
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
