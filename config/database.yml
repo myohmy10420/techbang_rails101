@@ -5,21 +5,24 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8mb4
+  database: rails101
+  host: localhost
+  username: root
+  password: kurt1111
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: techbang_rails101_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: techbang_rails101_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: techbang_rails101_production
