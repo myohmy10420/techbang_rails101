@@ -15,7 +15,12 @@ gem 'devise'
 
 group :development, :test do
   gem 'byebug'
+  gem "capistrano",  "~> 3.1", require: false
+  gem "capistrano-rails", "~> 1.1", require: false
+  gem 'capistrano-passenger'
+  gem "capistrano-rvm", "~> 0.1.1", require: false
+  gem "capistrano-rbenv", "~> 2.0", require: false
+
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
