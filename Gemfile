@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'simple_form'
 gem 'devise'
 gem 'mysql2', '0.3.20'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
@@ -20,6 +21,7 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem "capistrano-rvm", "~> 0.1.1", require: false
   gem "capistrano-rbenv", "~> 2.0", require: false
+  gem 'capistrano3-unicorn'
 
   gem 'web-console', '~> 2.0'
   gem 'spring'
