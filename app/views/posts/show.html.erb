@@ -1,0 +1,25 @@
+<div class="span12">
+  <h2>文章主題</h2>
+  <%= @post.content %>
+  <table class="table">
+    <thead>
+      <tr>
+        <td> 名字 </td>
+        <td> 留言 </td>
+      </tr>
+    </thead>
+    <tbody id="message-list">
+      <% @messages.each do |message| %>
+        <%= render "messages/message", message: message %>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="span12">
+    <%= simple_form_for [@group, @post, @new_message], remote: true do |f| %>
+      <%= f.input :content, input_html: { class: "input-xxlarge message_content" } %>
+      <div class="form-actions">
+        <%= f.submit "Submit", disable_with: 'Submiting...', class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

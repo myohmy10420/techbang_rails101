@@ -8,6 +8,12 @@ class PostsController < ApplicationController
     @post = @group.posts.build
   end
 
+  def show
+    @post = @group.posts.find(params[:id])
+    @messages = @post.messages
+    @new_message = Message.new
+  end
+
   def create
     @post = @group.posts.new(posts_params)
     @post.author = current_user

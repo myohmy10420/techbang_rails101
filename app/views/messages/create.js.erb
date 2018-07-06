@@ -1,0 +1,6 @@
+<% if @message.valid? %>
+  $("#message-list").append("<%=j render partial: "message", locals: { message: @message } %>");
+  $("#message_content").val("")
+<% else %>
+  alert("新增message失敗");
+<% end %>
